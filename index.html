@@ -1,0 +1,42 @@
+<html>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap" rel="stylesheet">
+  <script src="main.js"></script>
+</html>
+<body onload="main()" onresize="onWindowResize()">
+  <div class="container-switch">
+    <img src="arrow.png">
+  </div>
+  <div class="slidecontainer">
+    <div class="input-wrapper">
+      <span class='unselectable slider-text'>Gravity</span>
+      <input type="range" min="0" max="100" value="0" class="slider" id="gravityRange">
+    </div>
+    <div class="input-wrapper">
+      <span class='unselectable slider-text'>Ball Mass</span>
+      <input type="range" min="0" max="100" value="0" class="slider" id="ballMassRange">
+    </div>
+    <div class="input-wrapper">
+      <span class='unselectable slider-text'>Center Point Mass</span>
+      <input type="range" min="0" max="100" value="0" class="slider" id="centerPointMassRange">
+    </div>
+    <div class="input-wrapper">
+      <span class='unselectable slider-text'>Fake Anti-Gravity</span>
+      <input type="range" min="0" max="100" value="0" class="slider" id="centerPointAntiMassRange">
+    </div>
+    <div class="input-wrapper">
+      <span class='unselectable input-text'>Particles</span>
+      <input type="number" min="0" value="1000" class="number-input" id="numberOfParticlesInput">
+      <button class="button-input" id="numberOfParticlesApply">Apply</button>
+    </div>
+    <div class="input-wrapper">
+      <span class='unselectable input-text'>Air</span>
+      <input type="checkbox" class="checkbox" id="airCheckbox">
+    </div>
+    <div class="input-wrapper">
+      <span class="input-text unselectable">FPS: </span>
+      <span id="fpsDisplay" class="input-text unselectable">0</span>
+    </div>
+  </div>
+  <canvas id="glCanvas" width="640" height="480"></canvas>
+</body>
